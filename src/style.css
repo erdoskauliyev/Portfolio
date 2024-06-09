@@ -1,0 +1,575 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+:root {
+    --main-color: #FFA501;
+}
+
+.container {
+    width: 1140px;
+    margin: 0 auto;
+}
+
+.promo {
+    min-height: 100vh;
+    background: url('img/Background.jpg') no-repeat center center;
+    background-size: cover;
+    padding: 200px 0 0 0;
+    position: relative;
+}
+
+.title_fz16 {
+    position: relative;
+    font-size: 16px;
+    font-weight: 700;
+    padding-left: 10px;
+    z-index: 2;
+   
+}
+
+.title_fz16::before {
+    content: '';
+    position: absolute; /* not forget*/
+    left: 0;
+    top: -4px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: var(--main-color);
+    z-index: -1;
+}
+
+.title_fz48 {
+    margin-top: 15px;
+    display: block;
+    width: 535px;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.promo_btns {
+    width: 270px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.promo_link {
+    margin-top: 15px;
+    color: black;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    display: block;
+    height: 45px;
+    padding: 5px 27px;
+    text-align: center;
+    line-height: 3;
+    /*background-color: var(--main-color);*/
+}
+
+.btn {
+    background-color: var(--main-color);
+}
+
+.sidepanel {
+    position: fixed;
+    top: 200px;
+    left: 50px;
+    height: 340px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    z-index:2;
+}
+
+.sidepanel_divider {
+    width: 2px;
+    height: 70px;
+    background-color: var(--main-color);
+    
+}
+
+.sidepanel_text {
+    height: 150px; 
+    width: 25px;
+}
+
+.sidepanel_text span { /* rotate90deg просто так не работает.<span> используется как    контейнер для текста, чтобы применить к нему CSS-трансформации. */
+    display: block;
+    transform: rotate(-90deg) translate(-30%, -260%);
+    width: 150px;
+}
+
+
+/* этот селектор означает, что когда элемент с классом .sidepanel_link находится в состоянии наведения (:hover), он найдет <svg> внутри этого элемента, а затем найдет <path> внутри <svg> и применит стиль fill: red. */
+.sidepanel_link:hover  svg path {
+    fill: red;
+}
+
+.hamburger {
+    position:absolute;
+    top: 15px;
+    right: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 30px;
+    height: 3px;
+    background-color: #000000;
+    display: block;
+    margin-bottom: 2px;
+}
+
+.hamburger span.long {
+    width: 36px;
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100vh;
+    z-index: 10;
+    visibility: hidden;
+    opacity: 0;
+    transition: all .6s;
+}
+ .menu.active {
+    left: 0;
+    visibility: visible;
+    opacity: 1;
+    transition: all .6s;
+ }
+
+.menu_block {
+    position: relative;
+    width: 300px;
+    background-color: var(--main-color);
+    height: 100%;
+    padding-top: 150px;
+    padding-left: 40px;
+    z-index: 2;
+}
+
+.menu_close {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    cursor: pointer;
+}
+
+.menu_list {
+   list-style-type: none;
+   padding-left: 35px;
+}
+
+.menu_link {
+    position: relative;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 2;
+}
+
+.menu_link a {
+    text-decoration: none;
+    color:white;
+}
+
+.menu_link ::before {
+    content:'';
+    display: block;
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+    border: 1px solid black;
+   /*  background-color: var(--main-color); */
+    position: absolute;
+    top: 14px;
+    left: -35px;
+} 
+
+.menu_link:hover {
+    background-color: #b82525;
+}
+
+.menu_link:hover ::before  {
+    background-color: #f6f6f6;
+}
+
+.menu_social{
+    position: absolute;
+    bottom: 200px;
+    left: 50%;
+    transform: translate(-50%);
+    width: 90px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu_overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    opacity: .7;
+}
+
+.about {
+    margin-top: 120px;
+    margin-bottom: 120px;
+}
+
+.about_wrapper {
+    display: grid;
+    grid-template-columns: 400px 670px;
+    grid-template-rows: minmax(250px,auto)  minmax(255px,auto); /*если контент будет увеличиваться*/
+    column-gap: 70px;/* Промежуток между элементами сетки*/
+    row-gap: 40px;
+}
+
+.about_photo {
+    grid-row: 1/3 /*фото занимает 2 строки */
+}
+
+.about_subtitle {
+    padding-left: 11px;
+    font-size: 16px;
+    font-weight: 700;
+    margin-top: 13px;
+    margin-bottom: 9px;
+    position: relative;
+}
+
+.about_subtitle::before {
+    content: '';
+    position: absolute; /* not forget*/
+    left: 0;
+    top: -4px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: var(--main-color);
+    z-index: -1;
+}
+
+.about_title {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 15px;   
+}
+
+.divider {
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: var(--main-color);
+    margin-bottom: 15px;
+}
+
+.about_text {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 21px;    
+}
+
+
+.about_skills {
+    display: grid;
+    grid-template-columns: 330px 330px;
+    grid-template-rows: minmax(120px,auto) minmax(120px,auto);
+} 
+
+.about_skill {
+    display: grid;
+    grid-template-columns: 40px 204px;
+    column-gap:15px;
+    row-gap: 25px;
+} 
+
+.about_skill_title {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 21px;
+    margin-bottom: 5px;
+}
+
+.about_skill-text {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+}
+
+.about-icon {
+    position: relative;
+    padding-top: 10px;
+    padding-left: 17px;
+}
+
+.about-icon::before {
+    content: '';
+    position: absolute; /* not forget*/
+    left: 0;
+    top: -4px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: var(--main-color);
+    z-index: -1;
+}
+
+.resume {
+    margin-top: 100px;
+    padding-bottom: 5px;
+    /* min-height: 800px; */
+    height: 100%;
+    
+}
+
+.resume_title {
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+    position: relative;
+    margin-bottom: 15px;   
+}
+
+.resume_title::before {
+    content: '';
+    content: '';
+    position: absolute; /* not forget*/
+    left: 50%;
+    top: -4px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: var(--main-color);
+    z-index: -1;
+    transform: translate(-50%);
+     
+}
+
+.resume_subtitle {
+    font-size: 36px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.resume_divider {
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: var(--main-color);
+    margin: 0 auto;
+    margin-bottom: 70px;
+}
+
+.resume_wrapper {
+    display: grid;
+    grid-template-columns: 425px 425px;
+    grid-template-rows: auto; /* Высота строк будет автоматически зависеть от их контента */
+    grid-auto-rows: auto; /* Определяет высоту всех последующих строк */
+    column-gap: 200px;
+    row-gap: 50px;
+    padding-bottom: 100px;
+    padding-left: 115px;
+}
+
+
+
+.resume_column-title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    position: relative;
+}
+ .resume_column-title::before {
+    content: '' ; 
+    display: block;
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+    background-color: var(--main-color);
+    position: absolute;
+    top: 6px;
+    left: -50px;
+}
+
+ .resume ul li {
+    position: relative;
+    margin-top: 25px;
+ }
+
+.resume ul li::before {
+    content: '';
+    width: 1px;
+    height: 135%;
+    position: absolute;
+    top: -34px;
+    left: -43px;
+    background-color: black;
+}
+
+.resume_item-head {
+    width: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative
+}
+
+.resume_item-head img {
+    position: absolute;
+    top: 15px;
+    left: 18px;
+}
+
+.resume_item-img::after {
+    content: '';
+    display: block;
+    height: 1px;
+    width: 50px;
+    background-color: black;
+    position: absolute; /* Позиционируем псевдоэлемент относительно родителя */
+    top: 21px; /* Позиционируем псевдоэлемент */
+    left: -43px;
+}
+
+
+.resume_item-img::before {
+    content: '';
+    display: block;
+    height: 35px;
+    width: 35px;
+    border-radius: 100%;
+    background-color: var(--main-color);
+    position: absolute; /* Позиционируем псевдоэлемент относительно родителя */
+    top: 5px; /* Позиционируем псевдоэлемент */
+    left: 5px;
+}
+
+.resume_item-title {
+    display: block;
+    padding-left: 70px;
+}
+
+.resume_item-subtitle {
+    padding-left: 70px;
+    font-size: 14px;
+}
+
+.resume_item-text {
+    font-weight: 500;
+    font-size: 12px;
+    margin-top: 15px;
+}
+.mt-15 {
+    margin-top: 30px;
+}
+
+li { 
+    list-style-type:none
+}
+
+.skills {
+    min-height: 250px;
+    margin-bottom: 50px;
+}
+.skills_title {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.skills_subtitle {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.skills_reitings {
+    display: grid;
+    grid-template-columns: 350px 350px 350px;
+    grid-template-rows: 70px 70px;
+    row-gap: 30px;
+    column-gap: 40px;
+}
+
+.skills_item {
+    display: grid;
+    grid-template: 21px 27px/200px 35px; 
+    /* grid-template-columns: 200px 35px;
+    grid-template-rows: 21px 14px; */
+    justify-content: space-between;
+    align-content: space-between;
+}
+
+.skills_item-title {
+    position: relative;
+    padding-left: 15px;
+}
+
+.skills_item-title::before {
+    content: '';
+    width: 35px;
+    height: 35px;
+    background-color: var(--main-color);
+    border-radius: 100%;
+    display: block;
+    position: absolute;
+    top: -4px;
+    left: -1px;
+    z-index: -1;
+}
+
+.skills_item-line {
+    background-color: #a29c9c;
+    width: 350px;
+    height: 20px;
+   /*  margin-top: 25px;  */
+}
+
+.skills_item-line span {
+    display: block;
+    height: 100%;
+    background-color: var(--main-color);
+}
+
+.porfolio {
+    height: 600px;
+}
+
+.portfolio_wrapper {
+    display: grid;
+    /* grid-template-columns: 1fr 1fr 1fr 1fr; */
+    grid-template: repeat(2, 280px) / repeat(4, 280px);
+    grid-auto-rows: 280px;
+    gap: 5px;
+}
+.vertical {
+    grid-column: 4 / 5;
+    grid-row: 1 / 3;
+}
+
+.horizontal {
+    grid-column: 2 / 4;
+    grid-row: 2 / 3 ;
+}
+
+.portfolio_item:hover {
+    transform: scale(1.06);
+    filter: grayscale(150%);
+    transition: all .6s;
+}

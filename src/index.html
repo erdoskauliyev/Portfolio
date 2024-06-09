@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../src/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <aside class="sidepanel">
+        <a href="#" class="sidepanel_link"><img src="icons/Instagram.png" alt="Insta"></a> <!-- already upside down -->
+       <!--  SVG: Если вам нужно высокое качество изображений при любом размере, лёгкость стилизации и интерактивность.
+        img: Если вам нужно простое, быстрое решение и вы не планируете сложные стилизации или изменения размера. -->
+        <a href="#" class="sidepanel_link">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M-7.46167e-07 2.92969L-1.28061e-07 17.0703C-5.74539e-08 18.6856 1.31439 20 2.92969 20L17.0703 20C18.6856 20 20 18.6856 20 17.0703L20 11.1719L12.9297 11.1719L12.9297 13.5156L9.41406 13.5156L9.41406 11.1719L7.03125 11.1719C5.09262 11.1719 3.51562 9.59488 3.51562 7.65625L3.51562 4.10156L7.03125 4.10156L7.03125 7.65625L9.41406 7.65625L9.41406 4.10156L12.9297 4.6875L12.9297 7.65625L20 7.65625L20 2.92969C20 1.31439 18.6856 -8.16774e-07 17.0703 -7.46167e-07L2.92969 -1.28061e-07C1.31439 -5.74539e-08 -8.16774e-07 1.31439 -7.46167e-07 2.92969Z" fill="black"/>
+            </svg>
+        </a>
+        <a href="#" class="sidepanel_link"><img src="icons/Github.png" alt="GitHUb"></a>
+        <div class="sidepanel_divider"></div>
+        <div class="sidepanel_text"><span>Social media</span></div> <!--  rotate90deg просто так не работает.<span> используется как контейнер для текста, чтобы применить к нему CSS-трансформации.  -->
+    </aside> <!-- находтся  в body птому что posi:fixed-->
+ 
+    <div class="menu">
+        <div class="menu_block">
+            <div class="menu_close">
+                <svg width="25" height="30" viewBox="0 0 29 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.1568 14.5231L28.4489 3.23075C29.1837 2.49623 29.1837 1.30861 28.4489 0.574085C27.7144 -0.160437 26.5267 -0.160437 25.7922 0.574085L14.4998 11.8665L3.20781 0.574085C2.47295 -0.160437 1.28567 -0.160437 0.551149 0.574085C-0.183716 1.30861 -0.183716 2.49623 0.551149 3.23075L11.8432 14.5231L0.551149 25.8155C-0.183716 26.55 -0.183716 27.7376 0.551149 28.4721C0.917206 28.8385 1.39852 29.0226 1.87948 29.0226C2.36045 29.0226 2.84141 28.8385 3.20781 28.4721L14.4998 17.1798L25.7922 28.4721C26.1586 28.8385 26.6396 29.0226 27.1205 29.0226C27.6015 29.0226 28.0825 28.8385 28.4489 28.4721C29.1837 27.7376 29.1837 26.55 28.4489 25.8155L17.1568 14.5231Z" fill="black"/>
+                    </svg>
+            </div>
+            <nav> 
+                <ul class="menu_list"> <!-- nav>ul.menu_list>li.menu_link*6>a-->
+                    <li class="menu_link"><a href="#">About me</a></li>
+                    <li class="menu_link"><a href="#">My experience</a></li>
+                    <li class="menu_link"><a href="#">My skills</a></li>
+                    <li class="menu_link"><a href="#">My works</a></li>
+                    <li class="menu_link"><a href="#">Price list</a></li>
+                    <li class="menu_link"><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="menu_social">
+                <a href="#" class="menu_social_link"><img src="icons/Facebook (1).svg" alt="f"></a>
+                <a href="#" class="menu_social_link"><img src="icons/Instagram.svg" alt="i"></a>
+                <a href="#" class="menu_social_link"><img src="icons/Github.svg" alt="g"></a>
+            </div>
+        </div> 
+
+        <div class="menu_overlay"></div>
+    </div>
+    <section class="promo">
+        <div class="hamburger"><!-- будет внутри промо -->
+           <span></span>
+            <span class="long"></span>
+            <span></span>
+        </div>
+        <div class="container">
+            <div class="title_fz16">My name is Kauliyev Yerdos</div>
+            <h1 class="title_fz48">I'm a web developer from the Czech Republic</h1>
+            <div class="promo_btns">
+                <a href="#" class="promo_link btn">Portfolio</a>
+                <a href="#" class="promo_link">About me</a>
+            </div>
+        </div>
+    </section> 
+
+    <section class="about">
+        <div class="container">
+            <div class="about_wrapper">
+                <img class="about_photo"src="img/Photo.jpg" alt="1">
+                <div class="about_descr">
+                    <div class="about_subtitle">About me</div>
+                    <div class="about_title">My name is Yerdos</div>
+                    <div class="divider"></div>
+                    <p class="about_text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi facilis officiis sunt quis atque reprehenderit consequuntur maxime dolores minus. Dignissimos, ipsa. Maiores accusamus vitae perspiciatis porro repudiandae sit odio eprehenderit consequuntur maxime dolores minus. Dignissimos, ipsa. Maiores accusamus vitae perspiciatis porro repudiandae  illo. </p>
+                </div>
+                <div class="about_skills">
+                    <div class="about_skill">
+                        <div class="about-icon" ><img src="icons/web development.svg" alt="web"> </div>
+                        <div>
+                            <div class="about_skill_title"> Web development</div>
+                            <div class="about_skill-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunte magna aliqua.</div>
+                        </div>
+                    </div>
+
+                    <div class="about_skill">
+                        <div class="about-icon" ><img src="icons/Design.svg" alt="ui"> </div>
+                        <div>
+                            <div class="about_skill_title">UI/UX Design</div>
+                            <div class="about_skill-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut l eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                        </div>
+                    </div>
+
+                    <div class="about_skill">
+                        <div class="about-icon" ><img src="icons/Mobile dev.svg" alt="mobile"> </div>
+                        <div>
+                            <div class="about_skill_title">Application Development</div>
+                            <div class="about_skill-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="resume">
+        <div class="container">
+            <div class="resume_title">Experience</div>
+            <div class="resume_subtitle">How can I be useful?</div>
+            <div class="resume_divider"></div>
+
+            <div class="resume_wrapper">
+                <div class="resume_column">
+                    <div class="resume_column-title">Education</div>
+                    <ul>
+                        <li>
+                            <div class="resume_item">
+                                <div class="resume_item-head">
+                                    <div class="resume_item-head">
+                                        <div class="resume_item-img">
+                                            <img src="icons/University.svg" alt="uni">
+                                        </div>
+                                    </div>
+                                    <div class="resume_item-title">KazEU T.Ryskulov</div>
+                                    <div class="resume_item-subtitle">Almaty (2007-2011)</div>
+                                </div>
+
+                                <div class="resume_item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo. </div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="resume_item">
+                                <div class="resume_item-head">
+                                    <div class="resume_item-head">
+                                        <div class="resume_item-img">
+                                            <img src="icons/University.svg" alt="uni">
+                                        </div>
+                                    </div>
+                                    <div class="resume_item-title">KazEU T.Ryskulov</div>
+                                    <div class="resume_item-subtitle">Almaty (2007-2011)</div>
+                                </div>
+
+                                <div class="resume_item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo. </div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="resume_item">
+                                <div class="resume_item-head">
+                                    <div class="resume_item-head">
+                                        <div class="resume_item-img">
+                                            <img src="icons/University.svg" alt="uni">
+                                        </div>
+                                    </div>
+                                    <div class="resume_item-title">KazEU T.Ryskulov</div>
+                                    <div class="resume_item-subtitle">Almaty (2007-2011)</div>
+                                </div>
+
+                                <div class="resume_item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo. </div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="resume_item mt-15">
+                                <div class="resume_item-head">
+                                    <div class="resume_item-head">
+                                        <div class="resume_item-img">
+                                            <img src="icons/Courses.svg" alt="Cours">
+                                        </div>                                       
+                                    </div>
+                                    <div class="resume_item-title">Udemy</div>
+                                    <div class="resume_item-subtitle">Cours of Web-dewelopment </div>
+                                </div>
+
+                                <div class="resume_item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo. </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="resume_column">
+                    <div class="resume_column-title">Experience</div>
+                    <ul>
+                        <li>
+                            <div class="resume_item ">
+                                <div class="resume_item-head">
+                                    <div class="resume_item-head">
+                                        <div class="resume_item-img">
+                                            <img src="icons/Developer.svg" alt="Developer">
+                                        </div>                                       
+                                    </div>
+                                    <div class="resume_item-title">Front_End Developer</div>                                    <div class="resume_item-subtitle">Epam | Almaty</div>
+                                </div>
+
+                                <div class="resume_item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo. </div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="resume_item mt-15">
+                                <div class="resume_item-head">
+                                    <div class="resume_item-head">
+                                        <div class="resume_item-img">
+                                            <img src="icons/Design.svg" alt="Designer">    
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="resume_item-title">UI/UX Designer</div>
+                                    <div class="resume_item-subtitle">Squad Team Almaty</div>
+                                </div>
+
+                                <div class="resume_item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo. </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+    </section>
+
+    <section class="skills">
+        <div class="container">
+            <div class="skills_title">Skills</div>
+            <div class="skills_subtitle">What do I use at work?</div>
+            <div class="skills_reitings">
+                <div class="skills_item">
+                    <div class="skills_item-title">Website development</div>
+                    <div class="skills_item-counter">100%</div>
+                    <div class="skills_item-line">
+                        <span></span>
+                    </div>
+                </div>
+
+                <div class="skills_item">
+                    <div class="skills_item-title">Creativity</div>
+                    <div class="skills_item-counter">70%</div>
+                    <div class="skills_item-line">
+                        <span></span>
+                    </div>
+                </div>
+
+                <div class="skills_item">
+                    <div class="skills_item-title">Application creation</div>
+                    <div class="skills_item-counter">80%</div>
+                    <div class="skills_item-line">
+                        <span></span>
+                    </div>
+                </div>
+
+                <div class="skills_item">
+                    <div class="skills_item-title">Design creation</div>
+                    <div class="skills_item-counter">65%</div>
+                    <div class="skills_item-line">
+                        <span></span>
+                    </div>
+                </div>
+
+                <div class="skills_item">
+                    <div class="skills_item-title">Working with data</div>
+                    <div class="skills_item-counter">75%</div>
+                    <div class="skills_item-line">
+                        <span></span>
+                    </div>
+                </div>
+
+                <div class="skills_item">
+                    <div class="skills_item-title">Soft skills</div>
+                    <div class="skills_item-counter">85%</div>
+                    <div class="skills_item-line">
+                        <span></span>
+                    </div>
+                </div>              
+            </div>
+        </div>
+    </section>
+
+    <section class="porfolio">
+        <div class="container">
+            <div class="portfolio_wrapper">
+                <a href="/dist/uber/src" class="portfolio_item">
+                    <img src="img/uber.jpg" alt="uber">
+                </a>
+
+                <a href="#" class="portfolio_item">
+                    <img src="img/pulse.jpg" alt="pulse">
+                </a>
+
+                <a href="#" class="portfolio_item">
+                    <img src="img/bread.jpg" alt="bread">
+                </a>
+
+                <a href="#" class="portfolio_item vertical">
+                    <img src="img/plans.jpg" alt="plans">
+                </a>
+
+                <a href="#" class="portfolio_item">
+                    <img src="img/ipad.jpg" alt="ipad">
+                </a>
+
+                <a href="#" class="portfolio_item horizontal">
+                    <img src="img/mac.jpg" alt="mac">
+                </a>
+            </div>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
+
